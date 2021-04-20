@@ -1,9 +1,8 @@
 import React from "react";
 
-
-export default function Pet({ name, animal, breed, media, location, id }){
-  let hero =  "http://placeorgi.com/300/300"
-  if(media.length) {
+export default function Pet({ name, animal, breed, media, location, id }) {
+  let hero = "http://placeorgi.com/300/300";
+  if (media.length) {
     hero = media[0].small;
   }
 
@@ -17,5 +16,5 @@ export default function Pet({ name, animal, breed, media, location, id }){
         <h2>{`${animal} - ${breed} - ${location}`}</h2>
       </div>
     </a>
-  )
-};
+  );
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Link, Router } from "@reach/router"
+import { Link, Router } from "@reach/router";
 import SearchParams from "./SearchParams";
-import Details from './Details';
+import Details from "./Details";
 
 const App = () => {
   return (
