@@ -7,13 +7,22 @@ const SearchParams= () => {
     const [breeds, setBreeds] = useState([])
     const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
     const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
-    
+    const [pets, setPets] = useState([]);
+
+    async function requestPets() {
+        const {animals} = await pet.animals({
+            location,
+            breed,
+            type: animal
+        })
+    }
+
     useEffect(() => {
         setBreeds([]);
         setBreed("");
 
-        pet.breeds(animal).then(({breeds}) => {
-            const breedString = breeds.map(({name}) => name);
+        pet.breeds(animal).then(({breeds : apiBreeds}) => {
+            const breedString = apiBreeds.map(({name}) => name);
             setBreeds(breedString);
         },console.error)
     }, [animal, setBreed, setBreeds])

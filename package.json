@@ -8,6 +8,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
+  "browserslist": ["last 2 Chrome versions"],
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.1",
