@@ -4,6 +4,7 @@
   "description": "the Complete Intro to React, v5",
   "main": "src/App.js",
   "dependencies": {
+    "@frontendmasters/pet": "^1.0.3",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
