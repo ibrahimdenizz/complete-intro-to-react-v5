@@ -15,6 +15,8 @@ const SearchParams= () => {
             breed,
             type: animal
         })
+ 
+        setPets(animals || []);
     }
 
     useEffect(() => {
@@ -30,7 +32,10 @@ const SearchParams= () => {
     return (
         <div className="search-params">
             <h1>{location}</h1>
-            <form >
+            <form onSubmit={(e) => {
+                e.preventDefault();
+                requestPets();
+            }}>
                 <label htmlFor="location">
                     location
                     <input 
@@ -44,6 +49,7 @@ const SearchParams= () => {
                 <BreedDropdown />
                 <button>Submit</button>
             </form>
+            <Results pets={pets} />
         </div>
     )
 }
